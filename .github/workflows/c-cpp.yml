@@ -13,11 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: "Installing cxxtest"
+      run: sudo apt-get install -y cxxtest
+    - name: "Moving to src directory"
+      run: cd src
+    - name: "Building project (Compile object file)"
+      run: make complex
+    - name: "Running tests"
+      run: make tests
+      
