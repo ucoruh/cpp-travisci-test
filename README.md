@@ -1,3 +1,4 @@
 # C++ Travis-CI Basic Testing Example
 
-<a href="https://github.com/actions/create-release"><img alt="Test Status" src="https://github.com/ucoruh/cpp-travisci-test/workflows/Tests/badge.svg"></a>
+[![C/C++ CI](https://github.com/ucoruh/cpp-travisci-test/actions/workflows/c-cpp.yml/badge.svg?branch=main&event=release)](https://github.com/ucoruh/cpp-travisci-test/actions/workflows/c-cpp.yml)
+
