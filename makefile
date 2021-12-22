@@ -16,7 +16,7 @@ tests: complex.cpp testrunner.cpp complexTests.cpp
 	./simple_test.out
 	
 main.zip:
-    zip -r main.zip main.exe
+	zip -r main.zip main.exe
 
 clear: 
 	rm -f *.out *.o 	
