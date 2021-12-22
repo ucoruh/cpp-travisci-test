@@ -1,0 +1,13 @@
+dist: trusty
+sudo: false
+language: cpp
+
+script: 
+  - echo "Installing cxxtest"
+  - sudo apt-get install -y cxxtest
+  - echo "Moving to src directory"
+  - cd src
+  - echo "Building project (Compile object file)"
+  - make complex
+  - echo "Running tests"
+  - make tests
