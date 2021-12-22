@@ -16,7 +16,7 @@ jobs:
     - name: "Installing cxxtest"
       run: sudo apt-get install -y cxxtest
     - name: "Moving to src directory"
-      run: cd ../src
+      run: cd ../../src
     - name: "Building project (Compile object file)"
       run: make complex
     - name: "Running tests"
