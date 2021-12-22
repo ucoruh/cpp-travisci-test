@@ -22,6 +22,10 @@ jobs:
       run: make complex
     - name: Running tests
       run: make tests
+    - name: Building App (Compile object file)
+      run: make main
+    - name: Zip App
+      run: make main.zip
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -36,3 +40,12 @@ jobs:
             - Second Change
         draft: false
         prerelease: false
+    - name: upload windows artifact
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./main.zip
+        asset_name: main.windows-amd64.zip
+        asset_content_type: application/zip
